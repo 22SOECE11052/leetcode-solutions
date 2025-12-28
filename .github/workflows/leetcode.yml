@@ -1,0 +1,23 @@
+name: Update LeetCode Progress
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - run: pip install requests
+      - run: python update_leetcode.py
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "action@github.com"
+          git add README.md
+          git commit -m "Update LeetCode stats"
+          git push
