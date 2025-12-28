@@ -11,5 +11,6 @@
 
 ## 📊 LeetCode Stats
 
-![LeetCode Stats](https://leetcode-stats-six.vercel.app/?username=22SOECE11052)
+![LeetCode Stats](https://leetcode.card.workers.dev/22SOECE11052?theme=dark&font=baloo)
+
 
